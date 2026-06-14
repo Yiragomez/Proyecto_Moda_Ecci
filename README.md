@@ -1,2 +1,2 @@
-# Proyecto_Moda_-Ecci
+# Proyecto_Moda_Ecci
 Proyecto.

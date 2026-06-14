@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moda ECCI — Experiencia Académica</title>
+  <meta name="description"
+    content="Sitio web sobre la experiencia académica Moda ECCI — color, identidad visual y desarrollo FrontEnd." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-moda fixed-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">Moda <span>ECCI</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia" data-i18n="nav.experiencia">Nuestra Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#glosario" data-i18n="nav.glosario">Glosario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sostenibilidad" data-i18n="nav.sostenibilidad">Sostenibilidad</a></li>
+        </ul>
+        <div class="global-lang-wrap ms-3">
+          <button class="global-lang-btn active" data-lang="es" aria-label="Español">ES</button>
+          <button class="global-lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio" aria-label="Presentación">
+    <div class="container position-relative" style="z-index:2;">
+      <div class="row align-items-center" style="min-height:90vh;">
+        <div class="col-12 col-lg-8">
+          <div class="hero__floating-pill">
+            <span class="dot"></span>
+            <span data-i18n="hero.eyebrow">SENA · Centro de Manufactura en Textil y Cuero</span>
+          </div>
+          <h1 class="hero__title">
+            <span data-i18n="hero.title1">Nuestra Experiencia</span><br />
+            <em data-i18n="hero.title2">Moda ECCI</em><br />
+            <span class="hero__subtitle3" data-i18n="hero.title3">Color · Identidad · FrontEnd</span>
+          </h1>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">
+            Cuatro estudiantes del SENA frente a un espacio donde el color, la moda y el desarrollo de interfaces se
+            cruzan, y desde donde construimos esta página como evidencia de lo que vivimos y aprendimos juntos.
+          </p>
+          <div class="hero__cta">
+            <a href="#experiencia" class="btn-coral" data-i18n="hero.cta1">Ver nuestra experiencia</a>
+            <a href="#sobre" class="btn-outline-cream" data-i18n="hero.cta2">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__deco" aria-hidden="true">COLOR</div>
+  </section>
+
+  <!-- ============================
+     ALERT
+============================= -->
+  <div class="container mt-4">
+    <div class="alert-moda d-flex justify-content-between align-items-center" role="alert">
+      <span data-i18n="alert.text"><strong>Trabajo de equipo:</strong> Este sitio documenta lo que vivimos y aprendimos
+        como grupo en Moda ECCI — diseño, creatividad e innovación aplicada a la industria de la moda.</span>
+      <button class="alert-close ms-3"
+        style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--acento);"
+        aria-label="Cerrar">&times;</button>
+    </div>
+  </div>
+
+  <!-- ============================
+     SOBRE EL EVENTO
+============================= -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-5 reveal-left">
+          <span class="section-label" data-i18n="sobre.label">El evento</span>
+          <h2 class="section-title" data-i18n="sobre.title">¿Qué es Moda ECCI?</h2>
+          <hr class="section-divider">
+          <p data-i18n="sobre.p1">Moda ECCI es un espacio académico orientado hacia el diseño, la creatividad y la
+            innovación en la industria de la moda. Como estudiantes del SENA, asistimos para conectar conceptos de
+            diseño visual con el desarrollo de software FrontEnd.</p>
+          <p class="mt-3" data-i18n="sobre.p2">La conferencia principal estuvo a cargo de <strong>Sara Viloria</strong>,
+            quien nos habló de su propio recorrido con el color: desde la historia de los pigmentos hasta Newton, Goethe
+            y la forma en que cada persona ya tiene, sin saberlo, un lenguaje propio del color.</p>
+          <div class="d-flex gap-2 flex-wrap mt-4">
+            <button class="btn-sage" data-bs-toggle="modal" data-bs-target="#infoModal">
+              <i class="bi bi-info-circle me-2"></i><span data-i18n="sobre.modal.btn">Sobre este proyecto</span>
+            </button>
+            <a href="#experiencia" class="btn-coral">
+              <i class="bi bi-arrow-down me-1"></i><span data-i18n="sobre.explorar">Explorar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal-right">
+          <div id="heroCarousel" class="carousel slide carousel-moda" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/moda11.jpeg" alt="El viaje del color" class="carousel-img" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 data-i18n="carousel.s1.title">El viaje del color</h5>
+                  <p data-i18n="carousel.s1.desc">De la historia de los pigmentos a la psicología del color</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/moda5.jpg" alt="Newton y Goethe" class="carousel-img" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 data-i18n="carousel.s2.title">Newton y Goethe</h5>
+                  <p data-i18n="carousel.s2.desc">La física del color frente a la experiencia humana</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/moda3.jpg" alt="El color como lenguaje" class="carousel-img" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 data-i18n="carousel.s3.title">El color como lenguaje</h5>
+                  <p data-i18n="carousel.s3.desc">El primer lenguaje del ser humano</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     EXPERIENCIA
+============================= -->
+  <section class="section" id="experiencia">
+    <div class="container">
+
+      <div class="text-center mb-5 reveal">
+        <span class="section-label" data-i18n="exp.label">Sección 02</span>
+        <h2 class="section-title" data-i18n="exp.title">Nuestra Experiencia en Moda ECCI</h2>
+        <hr class="section-divider section-divider--center">
+      </div>
+
+      <div class="row align-items-start g-5">
+
+        <!-- Columna izquierda: texto + timeline -->
+        <div class="col-lg-6 reveal-left">
+          <span class="section-label" data-i18n="exp.es.label">Aprendizajes</span>
+          <h3 class="section-title" data-i18n="exp.es.title">Lo que aprendimos</h3>
+          <hr class="section-divider">
+
+          <p data-i18n="exp.es.p1">Asistir a Moda ECCI fue una experiencia que nos marcó como grupo. La conferencia de
+            <strong>Sara Viloria</strong> empezó con un ejercicio sencillo: nos pidió elegir un color que estuviéramos
+            viendo en ese momento, ponerle un recuerdo y luego una sensación. Con eso nos demostró algo que no
+            esperábamos: todos, sin estudiar teoría, ya tenemos un lenguaje propio del color.</p>
+
+          <!-- Timeline -->
+          <div class="timeline mt-4">
+            <div class="timeline-item">
+              <h4 data-i18n="tl.1.title">Primera impresión</h4>
+              <p data-i18n="tl.1.text">Llegar a un espacio donde la moda y el código comparten el mismo escenario nos pareció raro al
+                principio, pero terminó siendo justo el punto que conectó todo lo que vimos después.</p>
+            </div>
+            <div class="timeline-item">
+              <h4 data-i18n="tl.2.title">La historia oscura de los pigmentos</h4>
+              <p data-i18n="tl.2.text">Nos sorprendió descubrir que casi todos los colores históricos tienen un origen incómodo: el amarillo
+                gutagamba se hacía con orina de vacas alimentadas solo con hojas de mango, el verde de Scheele se asoció
+                con la muerte de Napoleón y de varias mujeres de la era victoriana, y el púrpura de Tiro necesitaba
+                toneladas de moluscos para teñir una sola prenda, por eso quedó reservado para la realeza durante siglos.</p>
+            </div>
+            <div class="timeline-item">
+              <h4 data-i18n="tl.3.title">El círculo cromático no es la respuesta</h4>
+              <p data-i18n="tl.3.text">Sara nos contó que el círculo cromático tiene apenas unos 300 años, mucho menos que el arte mismo, y
+                que cualquier combinación dentro de él "funciona". Lo que cambia no es la combinación, sino lo que
+                queremos comunicar. Eso nos hizo ver las armonías de color de otra forma: como punto de partida, no como receta.</p>
+            </div>
+            <div class="timeline-item">
+              <h4 data-i18n="tl.4.title">Newton, Goethe y la conexión FrontEnd</h4>
+              <p data-i18n="tl.4.text">Newton mostró que la luz blanca contiene todos los colores y armó el primer círculo cromático. Pero
+                Goethe, años después, dijo que el color no ocurre en un prisma sino en nuestro cerebro y nuestros ojos:
+                es psicología y emoción. Entendimos que un <code
+                  style="background:rgba(232,120,154,0.1);padding:0.1rem 0.4rem;border-radius:4px;font-size:0.85em;">design token</code>
+                en CSS hace en una interfaz algo parecido a lo que Goethe describía: traduce una decisión humana sobre
+                cómo nos sentimos con un color en algo consistente y reproducible.</p>
+            </div>
+          </div>
+
+          <div class="quote-block mt-4">
+            <p data-i18n="quote.text">"El color es el lugar donde nuestro cerebro y el universo se encuentran."</p>
+            <cite data-i18n="quote.cite">— Paul Klee, citado por Sara Viloria en su conferencia</cite>
+          </div>
+        </div>
+
+        <!-- Columna derecha: highlights + videos -->
+        <div class="col-lg-6 reveal-right">
+
+          <!-- Aspectos destacados -->
+          <div class="card-moda"
+            style="background:linear-gradient(135deg,rgba(244,184,200,0.15),rgba(201,184,232,0.15));border:1.5px solid rgba(201,184,232,0.3);">
+            <div class="card-body">
+              <h4 style="font-family:var(--display);color:var(--texto);margin-bottom:1rem;font-size:1rem;"
+                data-i18n="highlights.title">Lo que más nos llamó la atención</h4>
+              <ul style="display:flex;flex-direction:column;gap:0.75rem;">
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i class="bi bi-check-circle-fill" style="color:var(--acento);margin-top:0.15rem;flex-shrink:0;"></i>
+                  <span style="font-size:0.9rem;color:var(--texto-soft);" data-i18n="highlights.i1">El ejercicio inicial de nombrar un color, un
+                    recuerdo y una sensación — algo simple que cambió cómo vemos el color desde entonces</span>
+                </li>
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i class="bi bi-check-circle-fill" style="color:var(--acento);margin-top:0.15rem;flex-shrink:0;"></i>
+                  <span style="font-size:0.9rem;color:var(--texto-soft);" data-i18n="highlights.i2">La frase "una persona con colores nunca está
+                    sola", que habla de estar presentes y conectados con lo que vemos</span>
+                </li>
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i class="bi bi-check-circle-fill" style="color:var(--acento);margin-top:0.15rem;flex-shrink:0;"></i>
+                  <span style="font-size:0.9rem;color:var(--texto-soft);" data-i18n="highlights.i3">Descubrir que el círculo cromático tiene solo
+                    300 años y que cualquier combinación dentro de él "funciona"</span>
+                </li>
+                <li style="display:flex;gap:0.75rem;align-items:flex-start;">
+                  <i class="bi bi-check-circle-fill" style="color:var(--acento);margin-top:0.15rem;flex-shrink:0;"></i>
+                  <span style="font-size:0.9rem;color:var(--texto-soft);" data-i18n="highlights.i4">La idea de que el color es emoción pura, y que
+                    está en nuestras manos saber direccionarlo en lo que diseñamos</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- VIDEOS -->
+          <div class="mt-4">
+            <span class="section-label" data-i18n="video.label">Multimedia</span>
+            <h3 class="section-title mb-4" data-i18n="video.title">Videos del Evento</h3>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 reveal">
+              <div class="card-moda">
+                <div class="ratio ratio-16x9">
+                  <video src="vid/numero1.mp4" controls style="border-radius:var(--radius) var(--radius) 0 0;"></video>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title" data-i18n="video.v1.title">La conferencia de Sara Viloria</h3>
+                  <p class="card-text" data-i18n="video.v1.text">El recorrido completo: de los pigmentos antiguos a la
+                    psicología del color, contado desde su experiencia personal.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 reveal">
+              <div class="card-moda">
+                <div class="ratio ratio-16x9">
+                  <video src="vid/numero2.mp4" controls style="border-radius:var(--radius) var(--radius) 0 0;"></video>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title" data-i18n="video.v2.title">Momentos del evento</h3>
+                  <p class="card-text" data-i18n="video.v2.text">Algunos fragmentos de la jornada que vivimos en Moda
+                    ECCI, junto a otros estudiantes y diseñadores.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ---- GALERÍA ---- -->
+      <div class="mt-5 reveal">
+        <span class="section-label" data-i18n="gallery.label">Galería de fotos</span>
+        <div id="galleryCarousel" class="carousel slide carousel-moda mt-3" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" style="background:var(--acento);"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" style="background:var(--acento);"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" style="background:var(--acento);"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" style="background:var(--acento);"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/moda7.jpg" alt="Foto del evento Moda ECCI 1" class="gallery-img" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/moda9.jpg" alt="Foto del evento Moda ECCI 2" class="gallery-img" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/moda8.jpg" alt="Foto del evento Moda ECCI 3" class="gallery-img" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/mdoa10.jpg" alt="Foto del evento Moda ECCI 4" class="gallery-img" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+        <p style="text-align:center;font-size:0.78rem;color:var(--texto-soft);margin-top:0.75rem;" data-i18n="gallery.caption">Fotos del evento</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================
+     GLOSARIO
+============================= -->
+  <section class="section" id="glosario">
+    <div class="container">
+      <div class="row justify-content-between align-items-end mb-4">
+        <div class="col-md-6 reveal">
+          <span class="section-label" data-i18n="glos.label">Sección 03</span>
+          <h2 class="section-title" data-i18n="glos.title">Glosario Técnico</h2>
+          <hr class="section-divider">
+        </div>
+        <div class="col-md-5 reveal">
+          <label for="glossarySearch"
+            style="font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-bottom:0.5rem;">
+            <i class="bi bi-search me-1"></i><span data-i18n="glos.search.label">Buscar</span>
+          </label>
+          <input type="search" id="glossarySearch" data-i18n-placeholder="glos.search.placeholder"
+            placeholder="Buscar en español o inglés…" />
+        </div>
+      </div>
+      <div class="table-responsive reveal">
+        <table class="table-glossary">
+          <thead>
+            <tr>
+              <th data-i18n="glos.th1">English</th>
+              <th data-i18n="glos.th2">Español</th>
+              <th data-i18n="glos.th3">Definición / Definition</th>
+              <th data-i18n="glos.th4">Categoría</th>
+            </tr>
+          </thead>
+          <tbody id="glossaryBody">
+            <tr><td>Color Theory</td><td>Teoría del color</td><td>The study of how colors interact, their psychological effects, and how to combine them harmoniously.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Color Wheel</td><td>Círculo cromático</td><td>A circular diagram, created by Newton about 300 years ago, that organizes colors and their relationships; any combination within it can work depending on what you want to communicate.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Afterimage</td><td>Postimagen</td><td>A phenomenon studied by Goethe: after staring at a saturated color and then looking at a white surface, the eye generates the complementary color on its own.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Pigment</td><td>Pigmento</td><td>The substance that gives color to materials; humanity's first pigment was black, made from concentrated smoke inside caves.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Ultramarine</td><td>Azul ultramar</td><td>An extremely expensive blue pigment made from lapis lazuli, historically reserved almost exclusively for depictions of the Virgin Mary.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Tyrian Purple</td><td>Púrpura de Tiro</td><td>A historic purple dye requiring tons of mollusks to color a single garment, which made it a color reserved for royalty.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Scheele's Green</td><td>Verde de Scheele</td><td>A toxic, arsenic-based green pigment popular in Victorian-era clothing and decor, linked to several deaths including Napoleon's.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Color Semiology</td><td>Semiología del color</td><td>The study of how colors carry cultural and symbolic meanings, such as a red traffic sign making us slow down before we read it.</td><td><span class="tag">Design</span></td></tr>
+            <tr><td>Color Psychology</td><td>Psicología del color</td><td>The study of how colors affect mood, memory, and perception — the foundation Goethe contributed alongside Newton's physics of color.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Hue</td><td>Matiz</td><td>The pure color attribute that distinguishes red from blue, yellow from green, without brightness or saturation.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Saturation</td><td>Saturación</td><td>The intensity or purity of a color — from vivid (fully saturated) to grey (completely desaturated).</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Color Palette</td><td>Paleta de colores</td><td>A curated set of colors chosen for consistent use across a design system or brand identity.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Pantone</td><td>Pantone</td><td>A standardized color identification and matching system used worldwide in fashion, printing, and digital design.</td><td><span class="tag">Color</span></td></tr>
+            <tr><td>Design Token</td><td>Token de diseño</td><td>Named variables that store design decisions (colors, spacing, fonts) for consistent application across products — our FrontEnd equivalent to Pantone codes.</td><td><span class="tag">FrontEnd</span></td></tr>
+            <tr><td>Responsive Design</td><td>Diseño responsive</td><td>A web design approach that makes interfaces adapt fluidly to different screen sizes and devices.</td><td><span class="tag">FrontEnd</span></td></tr>
+            <tr><td>Bootstrap</td><td>Bootstrap</td><td>An open-source CSS framework with pre-built components for rapid development of responsive interfaces.</td><td><span class="tag">FrontEnd</span></td></tr>
+            <tr><td>Contrast</td><td>Contraste</td><td>The difference in luminance or color between elements; essential for readability and accessibility.</td><td><span class="tag">Accessibility</span></td></tr>
+            <tr><td>Accessibility</td><td>Accesibilidad</td><td>WCAG standards ensuring digital content is usable by people with disabilities.</td><td><span class="tag">Accessibility</span></td></tr>
+            <tr><td>Circular Economy</td><td>Economía circular</td><td>An economic model focused on eliminating waste through reuse, recycling, and regeneration of materials.</td><td><span class="tag">Sustainability</span></td></tr>
+            <tr><td>Upcycling</td><td>Suprarreciclaje</td><td>The process of transforming waste or discarded materials into new products of higher quality or value.</td><td><span class="tag">Sustainability</span></td></tr>
+            <tr><td>Sustainable Fashion</td><td>Moda sostenible</td><td>An approach to fashion design and production that minimizes environmental impact.</td><td><span class="tag">Sustainability</span></td></tr>
+          </tbody>
+        </table>
+        <p id="noResult" data-i18n="glos.noResult"
+          style="display:none;text-align:center;padding:2rem;color:#888;font-style:italic;">No se encontraron términos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     SOSTENIBILIDAD
+============================= -->
+  <section class="section" id="sostenibilidad">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-label" data-i18n="sost.label">Sección 04</span>
+        <h2 class="section-title" data-i18n="sost.title">Tecnología, Sostenibilidad<br />&amp; Economía Circular</h2>
+        <hr class="section-divider section-divider--center">
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="card-moda h-100">
+            <div class="card-body text-center">
+              <div class="sustain-icon mx-auto"><i class="bi bi-arrow-repeat"></i></div>
+              <h3 class="card-title" data-i18n="sost.c1.title">Reducción de Residuos</h3>
+              <p class="card-text" data-i18n="sost.c1.text">La industria de la moda genera el 10% de las emisiones de carbono global. El diseño circular prioriza materiales que retornan al ciclo productivo sin convertirse en basura.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card-moda h-100">
+            <div class="card-body text-center">
+              <div class="sustain-icon mx-auto"><i class="bi bi-recycle"></i></div>
+              <h3 class="card-title" data-i18n="sost.c2.title">Reutilización</h3>
+              <p class="card-text" data-i18n="sost.c2.text">El upcycling transforma prendas descartadas en nuevas piezas de mayor valor. En tecnología equivale a reutilizar componentes de código, librerías open-source y arquitecturas modulares.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card-moda h-100">
+            <div class="card-body text-center">
+              <div class="sustain-icon mx-auto"><i class="bi bi-lightning-charge"></i></div>
+              <h3 class="card-title" data-i18n="sost.c3.title">Optimización de Recursos</h3>
+              <p class="card-text" data-i18n="sost.c3.text">Código limpio, imágenes optimizadas y menor consumo de energía en servidores reduce la huella de carbono digital. El diseño eficiente minimiza el desperdicio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card-moda h-100">
+            <div class="card-body text-center">
+              <div class="sustain-icon mx-auto" style="background:linear-gradient(135deg,var(--rosa),var(--melocoton));"><i class="bi bi-leaf"></i></div>
+              <h3 class="card-title" data-i18n="sost.c4.title">Producción Sostenible</h3>
+              <p class="card-text" data-i18n="sost.c4.text">Materiales naturales y tinturas ecológicas son el equivalente del código limpio y documentado que produce software de calidad con menor esfuerzo de mantenimiento.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card-moda h-100">
+            <div class="card-body text-center">
+              <div class="sustain-icon mx-auto" style="background:linear-gradient(135deg,var(--lavanda),var(--azul));"><i class="bi bi-globe-americas"></i></div>
+              <h3 class="card-title" data-i18n="sost.c5.title">Impacto Ambiental Positivo</h3>
+              <p class="card-text" data-i18n="sost.c5.text">Más allá de reducir el daño, el objetivo es regenerar: diseñar productos que mejoran activamente el entorno donde existen, tanto en moda como en tecnología.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card-moda h-100">
+            <div class="card-body text-center">
+              <div class="sustain-icon mx-auto" style="background:linear-gradient(135deg,#4A3F55,#354060);"><i class="bi bi-building-check" style="color:var(--blanco);"></i></div>
+              <h3 class="card-title" data-i18n="sost.c6.title">Responsabilidad Organizacional</h3>
+              <p class="card-text" data-i18n="sost.c6.text">Las empresas deben asumir responsabilidad por su cadena de valor. En tecnología esto incluye transparencia de datos, privacidad y ética en el desarrollo de software.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compromiso -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8 text-center reveal">
+          <h3 class="section-title" data-i18n="sost.commit.title">Nuestro compromiso como futuros desarrolladores</h3>
+          <hr class="section-divider section-divider--center">
+          <p style="font-size:1.05rem;line-height:1.85;" data-i18n="sost.commit.text">
+            Después de Moda ECCI, las cuatro nos comprometemos a aplicar principios de economía circular en nuestra
+            práctica profesional: escribir código reutilizable, documentar para que otros puedan construir sobre nuestro
+            trabajo, elegir tecnologías de bajo impacto energético, diseñar interfaces accesibles para todas las
+            personas, y pensar siempre en el ciclo de vida completo de lo que construimos.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+            <span class="tag" style="font-size:0.78rem;padding:0.4rem 1rem;" data-i18n="sost.tag1">♻️ Código reutilizable</span>
+            <span class="tag" style="font-size:0.78rem;padding:0.4rem 1rem;" data-i18n="sost.tag2">📖 Documentar siempre</span>
+            <span class="tag" style="font-size:0.78rem;padding:0.4rem 1rem;" data-i18n="sost.tag3">♿ Diseño accesible</span>
+            <span class="tag" style="font-size:0.78rem;padding:0.4rem 1rem;" data-i18n="sost.tag4">🌱 Bajo impacto digital</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================
+     MODAL
+============================= -->
+  <div class="modal fade modal-moda" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel" data-i18n="modal.title">Sobre este proyecto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p data-i18n="modal.p">Sitio web académico, por cuatro estudiantes, como entregable del
+            módulo FrontEnd del SENA — Centro de Manufactura en Textil y Cuero. Todo el contenido surge de nuestra
+            participación directa en la conferencia de Sara Viloria en Moda ECCI.</p>
+          <ul class="mt-3" style="display:flex;flex-direction:column;gap:0.5rem;">
+            <li style="display:flex;gap:0.6rem;align-items:center;font-size:0.9rem;color:var(--texto-soft);">
+              <i class="bi bi-code-slash" style="color:var(--acento);"></i>
+              <span data-i18n="modal.li1">HTML5 · CSS3 · Bootstrap 5 · JavaScript</span>
+            </li>
+            <li style="display:flex;gap:0.6rem;align-items:center;font-size:0.9rem;color:var(--texto-soft);">
+              <i class="bi bi-translate" style="color:var(--acento);"></i>
+              <span data-i18n="modal.li2">Contenido bilingüe (ES / EN)</span>
+            </li>
+            <li style="display:flex;gap:0.6rem;align-items:center;font-size:0.9rem;color:var(--texto-soft);">
+              <i class="bi bi-palette" style="color:var(--acento);"></i>
+              <span data-i18n="modal.li3">Paleta pastel inspirada en Pantone</span>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-coral" data-bs-dismiss="modal" data-i18n="modal.close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+     FOOTER
+============================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <p class="footer__brand">Moda <span>ECCI</span></p>
+          <p class="mt-2" style="font-size:0.85rem;" data-i18n="footer.desc">Trabajo en equipo — Moda ECCI, SENA Centro de Manufactura en Textil y Cuero.</p>
+        </div>
+        <div class="col-md-4">
+          <p style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem;color:rgba(254,252,255,0.35);" data-i18n="footer.nav">Navegación</p>
+          <ul style="display:flex;flex-direction:column;gap:0.5rem;">
+            <li><a href="#inicio" data-i18n="footer.nav1">Inicio</a></li>
+            <li><a href="#experiencia" data-i18n="footer.nav2">Nuestra Experiencia</a></li>
+            <li><a href="#glosario" data-i18n="footer.nav3">Glosario</a></li>
+            <li><a href="#sostenibilidad" data-i18n="footer.nav4">Sostenibilidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <p style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem;color:rgba(254,252,255,0.35);" data-i18n="footer.tech">Tecnologías</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+            <span class="tag tag--dark">HTML5</span>
+            <span class="tag tag--dark">CSS3</span>
+            <span class="tag tag--dark">Bootstrap 5</span>
+            <span class="tag tag--dark">JavaScript</span>
+            <span class="tag tag--dark">Pantone</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__divider">
+      <p class="footer__copy text-center" data-i18n="footer.copy">&copy; 2025 Moda ECCI — Trabajo en equipo, SENA Centro de Manufactura en Textil y Cuero</p>
+    </div>
+  </footer>
+
+  <div id="swatchToast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
